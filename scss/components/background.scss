@@ -1,0 +1,18 @@
+.background {
+    &-main {
+		background-color: #2d6e70;
+	}
+	@include hook-background();
+    &-meetourteam {
+        background-color: #eef1ec;
+    }
+    
+    &-download {
+        background-image: url(../images/download_background.png);
+    }
+}
+
+@include hook-background-misc();
+
+// @mixin hook-background() {};
+// @mixin hook-background-misc() {};

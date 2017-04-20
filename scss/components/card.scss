@@ -1,0 +1,95 @@
+.cards {
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+.card {
+    
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 29%;
+    margin-bottom: 30px;
+    margin-left: 4%;  
+	position: relative;
+    align-items: center;
+    
+	@include hook-card();
+
+	&-header {
+		@include hook-card-header();
+	}
+	&-body {
+		@include hook-card-body();
+	}
+	&-footer {
+		@include hook-card-footer();
+	}
+	&-heading {
+        font-size: 16px;
+        color: #0f5f5c;
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+		@include hook-card-heading();
+        
+        &.center {
+            margin-bottom: 18px;
+            text-align: center;
+            align-self: center;
+        }
+        
+        &.left {
+            align-self: flex-start;
+        }
+        
+	}
+	&-description {
+        font-size: 14px;
+        color: #83a7a5;
+        font-family: 'Roboto', sans-serif;
+		@include hook-card-description();
+        
+        &.center {
+            text-align: center;
+            align-self: center;
+        }
+        
+        &.left {
+            align-self: flex-start;
+        }
+        
+	}
+	&-image {
+        
+		img {
+			display: block;
+		}
+        
+        &.about_us {
+        margin-bottom: 28px;   
+        }
+        &.meet_team {
+       
+        margin-bottom: 17px;   
+        }
+		@include hook-card-image();
+	}
+    
+}
+    
+
+    
+}
+
+@include hook-card-misc();
+
+// @mixin hook-card() {};
+// @mixin hook-card-header() {};
+// @mixin hook-card-body() {};
+// @mixin hook-card-footer() {};
+// @mixin hook-card-heading() {};
+// @mixin hook-card-description() {};
+// @mixin hook-card-image() {};
+// @mixin hook-card-misc() {};
+

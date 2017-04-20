@@ -1,0 +1,244 @@
+$navbar-breakpoint:    768px;
+
+.section {
+    
+	&-header {
+    min-height: 600px;
+	position: relative;
+	z-index: 1;    
+        
+    }
+    
+    &.header {
+
+        display: flex;
+        flex-direction: column;
+        min-height: 510px;
+        justify-content: center;
+        align-items: center;
+        
+    &-heading {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: white;
+        font-size: 50px;
+        line-height: 60px;
+        max-height: 111px;
+        max-width: 816px;
+        text-align: center;
+        
+        @media all and (max-width: ($navbar-breakpoint - 1px))  {
+			font-size: 30px;
+		}
+        
+    }
+    &-btn {
+        color: white;
+        margin-top: 33px;
+        }
+     
+
+    }
+    
+	&-body {
+        
+	    display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+        &.about {
+          
+            align-items: center;
+        }
+        
+        
+        &.aboutus {
+            height: 620px;
+        }
+    
+        
+        &.meetourteam {
+            height: 660px;
+        }
+        
+        &.download {
+           
+            height: 200px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        
+
+	&-heading {
+      font-family: 'Roboto', sans-serif;
+      font-size: 32px;
+      color: #0f5f5c;
+      margin-bottom: 60px;
+      position: relative;
+        
+	}
+        &-heading:after {
+            content: "";
+            background-image: url(../images/shape.png);
+            position: absolute;
+         
+            width: 65px;
+            top: 60px;
+            left: 50%;
+            height: 1px; 
+            transform: translate(-50%);
+        }   
+        
+	&-description {
+      text-align: center;    
+      font-family: 'Roboto', sans-serif;
+      font-size: 15px;
+      color: #83a7a5;
+      max-width: 700px;
+	}
+    }
+    
+    &-content {
+        &-download {
+            
+            color: white;
+            
+            &.heading {
+                font-size: 28px;
+                font-family: 'Roboto', sans-serif;
+                
+                @media all and (max-width: ($navbar-breakpoint - 1px))  {
+			     font-size: 17px;
+		      }
+            }
+            
+            &.description {
+                font-size: 15px;
+                font-family: 'Roboto', sans-serif;
+            }
+            
+            &.link {
+                font-family: 'Montserrat', sans-serif;
+                text-transform: uppercase;
+                background-color: #3b752c;
+                padding: 15px 22px;
+                font-size: 13px;
+                text-align: center;
+            }
+        }
+    }
+
+    
+    &-overlay {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: inherit;
+		z-index: -10;
+		opacity: 0.4;
+	}
+    
+    &-fill-height {
+		min-height: 100vh;
+		@include hook-section-fill-height();
+	}
+
+    
+    &-footer {
+	   height: 370px;
+       display: flex;
+       
+        &.footer {
+            padding-top: 50px;
+            height: 290px;
+            border-bottom: 2px solid #eef1ec;
+            
+            
+            .header {
+                color: #0f5f5c;
+                font-weight: 500;
+            }
+            
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            ul li {
+                padding-bottom: 16px;
+            }
+            
+            ul a {
+                text-decoration: none;
+                color: #8fb7b3;
+                font-size: 13px;
+                font-family: 'Roboto', sans-serif;
+            }
+            
+            ul input[type="text"] {
+                background-color: #eef2ed;
+                padding: 12px 16px;
+                padding-right: 60px;
+                border: 0; 
+                color: #8fb7b3;
+                font-size: 13px;
+                font-family: 'Roboto', sans-serif;
+                width: 241px;
+                height: 36px;
+                position: relative;
+                background-image: url(../images/vect.png);
+                background-repeat: no-repeat;
+                background-position: 94%;
+            }
+            
+            
+            ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+             color: #8fb7b3;
+            }
+            ::-moz-placeholder { /* Firefox 19+ */
+             color: #8fb7b3;
+            }
+            :-ms-input-placeholder { /* IE 10+ */
+             color: #8fb7b3;
+            }
+            :-moz-placeholder { /* Firefox 18- */
+             color: #8fb7b3;
+            }
+            
+        }
+        
+        &-content {
+            &.feature {
+                width: 25%;
+            }
+        }
+        
+        &.copyright {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #8fb7b3;
+            font-size: 12px;
+            font-family: 'Roboto', sans-serif;
+        }
+	}
+    
+    @include hook-section-misc();
+}
+
+ @mixin hook-section() {};
+// @mixin hook-section-header() {};
+// @mixin hook-section-body() {};
+// @mixin hook-section-footer() {};
+// @mixin hook-section-heading() {};
+// @mixin hook-section-description() {};
+// @mixin hook-section-overlay() {};
+// @mixin hook-section-fill-height() {};
+// @mixin hook-section-misc() {};
